@@ -1,2 +1,5 @@
 # bioIT_internship
-some scripts written for my teachers' special wishes
+
+These are some scripts which I've written for my teachers as tasks assigned to me. All of them were written when I did an intership at the University of Gdańsk.
+
+Please, do not copy.

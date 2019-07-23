@@ -49,10 +49,14 @@ def ShortPalindromeSearch(seq1, seq2, initial_seq):
                     break
             if ans == 1:
                 if pal1 in short_palindrome: # if found palindrome is already in the list but a new one is at further positions
-                    tmp = short_palindrome[short_palindrome.index(pal1)+1]
+                    if short_palindrome.count(pal1) == 1:
+                        tmp = short_palindrome[short_palindrome.index(pal1)+1]
+                    if short_palindrome.count(pal1) >= 2:
+                        tmp = last_occur
                     short_palindrome.append(pal1)
                     indexes = (initial_seq.index(pal1, tmp[0]+1), initial_seq.index(pal1, tmp[0]+1)+N-1)
                     short_palindrome.append(indexes)
+                    last_occur = indexes
                 else: # if searched palindrome is not found before
                     short_palindrome.append(pal1)
                     indexes = (initial_seq.index(pal1), initial_seq.index(pal1)+N-1)
@@ -74,10 +78,14 @@ def n_PalindromeSearch(seq1, seq2, n):
                 break
         if ans == 1:
             if pal1 in n_palindrome: # if found palindrome is already in the list but a new one is at further positions
-                tmp = n_palindrome[n_palindrome.index(pal1)+1]
+                if n_palindrome.count(pal1) == 1:
+                    tmp = n_palindrome[n_palindrome.index(pal1)+1]
+                if n_palindrome.count(pal1) >= 2:
+                    tmp = last_occur
                 n_palindrome.append(pal1)
                 indexes = (seq1.index(pal1, tmp[0]+1), seq1.index(pal1, tmp[0]+1)+n-1)
                 n_palindrome.append(indexes)
+                last_occur = indexes
             else: # if searched palindrome is not found before
                 n_palindrome.append(pal1)
                 indexes = (seq1.index(pal1), seq1.index(pal1)+n-1)

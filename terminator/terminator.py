@@ -100,7 +100,7 @@ def GibbsFreeEnergy(t):
     return G
 
 def ShowTerminators(seq, terminators):
-    """shows graphically how a terminator t looks like"""
+    """shows graphically how each terminator from the list of terminators looks like"""
     
     ts = seq.replace("T", "U")
     l = lambda x: (x[3][0]-1)-x[1][1]

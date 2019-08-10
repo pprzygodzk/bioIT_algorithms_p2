@@ -1,0 +1,3 @@
+# Useful information about Rho-independent terminators:
+https://www.mun.ca/biology/scarr/iGen3_05-05.html
+https://parts.igem.org/Help:Terminators/Design

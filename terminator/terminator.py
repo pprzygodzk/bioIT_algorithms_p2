@@ -157,3 +157,63 @@ def TerminatorSearch(seq):
 if __name__ == '__main__':
     DNA = "AACAAACCGAGCCCGCCTAATGAGCGGGCTTTTTTTTTGACAATGAAAAAACGACAAAGCAGCGCGGATTATCGCGCTGCTTTTTTATCCCTGT"
     TerminatorSearch(DNA)
+
+#                                       OUTPUT
+########################################################################################
+########################################################################################
+# TERMINATOR #001
+#¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+# * loop length: 6 nt
+# * stem length: 8 bp
+# * energy: -19.299999999999997 kcal/mol
+#¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+#  U U
+#A     U
+# G   U
+#  G≡C
+#  C≡G
+#  G≡C
+#  C≡G
+#  G≡C
+#  A=U
+#  C≡G
+#  G≡CUUUUUUAUCCCUGU
+# 57         87
+
+# TERMINATOR #002
+#¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+# * loop length: 7 nt
+# * stem length: 7 bp
+# * energy: -18.89 kcal/mol
+#¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+#   A
+#A     U
+#U     G
+# C   A
+#  C≡G
+#  G≡C
+#  C≡G
+#  C≡G
+#  C≡G
+#  G≡C
+#  A=UUUUUUUUUGACAAUGAAAAAACG
+#  8         37
+
+# TERMINATOR #003
+#¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+# * loop length: 8 nt
+# * stem length: 7 bp
+# * energy: -15.19 kcal/mol
+#¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+#  U U
+#A     U
+#G     A
+# G   C
+#  C≡G
+#  G≡C
+#  C≡G
+#  G≡C
+#  A=U
+#  C≡G
+#  G≡CUUUUUUAUCCCUGU
+# 57         87

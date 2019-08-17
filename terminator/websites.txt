@@ -1,3 +1,6 @@
 Useful information about Rho-independent terminators:
 https://www.mun.ca/biology/scarr/iGen3_05-05.html
 https://parts.igem.org/Help:Terminators/Design
+
+Idea of the PoliTScore function was found on:
+https://genomebiology.biomedcentral.com/articles/10.1186/gb-2007-8-2-r22

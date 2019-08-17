@@ -65,7 +65,7 @@ def PoliTSearch(seq):
     for N in range(8, 5, -1):       # poli-T regions has an average length of 6-8 nt
         for i in range(len(seq)-N+1):
             reg = seq[i:(i+N)]
-            if not reg.startswith("TTT"):
+            if not reg.startswith("TTT"): # this kind of sequence can't be a poli-T region
                 continue
             if PoliTScore(reg) > min_score:
                 continue

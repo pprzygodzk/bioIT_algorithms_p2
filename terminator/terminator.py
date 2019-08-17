@@ -46,17 +46,31 @@ def Match_n_Find(GC_regions):
     return palindromes
 
 
+def PoliTScore(seq):
+    """calculates the score for the given sequence"""
+    
+    x0 = 1
+    score = 0
+    for i in range(len(seq)):
+        x0 = 0.9*x0 if seq[i] == "T" else 0.6*x0
+        score -= x0
+    return score
+
+
 def PoliTSearch(seq):
     """searches poli-T regions (thymine-only) in the entered sequences"""
     
     poliT_regions = []
-    T_percentage = lambda s: (s.count("T"))/len(s)
+    min_score = -4.8
     for N in range(8, 5, -1):       # poli-T regions has an average length of 6-8 nt
         for i in range(len(seq)-N+1):
             reg = seq[i:(i+N)]
-            if T_percentage(reg) < 0.875:
+            if not reg.startswith("TTT"):
+                continue
+            if PoliTScore(reg) > min_score:
                 continue
             poliT_regions.append([reg, (i, i+N-1)])
+        min_score += 0.3
     
     for reg in poliT_regions:       # deletes duplicates which are contained in longer sequences
         for reg_duplicate in reversed(poliT_regions):
